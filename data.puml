@@ -1,0 +1,64 @@
+@startuml
+
+entity "Prompt" as prompt {
+  * id
+  * name
+  * themes
+  * parts 
+}
+
+entity "Part" as part {
+  * id
+  * name
+}
+
+entity "Session" as session {
+  * id
+  * name
+}
+
+entity "Campaign" as camp {
+  * id
+  * name
+}
+
+entity "Player" as player {
+  * id
+  * name
+}
+
+entity "Character" as character {
+  * id
+  * name
+}
+
+entity "NPC" as npc {
+  * id
+  * name
+}
+
+entity "NPC" as npc {
+  * id
+  * name
+}
+
+entity "location" as location {
+  * id
+  * name
+  * location_id
+}
+
+
+prompt }|--|{ camp
+camp }|--|| part
+part }|--|| session
+camp }|--|| player
+player }|--|| character
+camp }|--|| npc
+camp }|--|| location
+location ||--|| location
+
+
+
+
+@enduml
